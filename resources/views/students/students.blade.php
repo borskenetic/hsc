@@ -133,9 +133,6 @@
                                                 @if($student->id_number)
                                                     ID {{ $student->id_number }}
                                                 @endif
-                                                @if($student->qrcode)
-                                                    · <span class="patron-dir__code">{{ $student->qrcode }}</span>
-                                                @endif
                                             </div>
                                         </div>
                                     </div>
