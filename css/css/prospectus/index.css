@@ -1,0 +1,436 @@
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f0f4f8;
+    }
+    body.modal-open::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(5px); /* Blur intensity */
+    z-index: 1040; /* Just below modal */
+    background: rgba(0, 0, 0, 0.2); /* Optional dark overlay */
+    }
+    /*header style sheet*/
+        .header-logo-img {
+            margin-left: 9rem;
+            max-height: 50px;
+            width: auto;
+        }
+        .school-name{
+            color: red;
+            margin-left: 5px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .btn0{
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 50px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn0:hover{
+            color: #ffb845;
+        }
+        
+        .btn1{
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 50px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn1:hover{
+            color: #ffb845;
+        }
+        .btn2{
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 50px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn2:hover{
+            color: #ffb845;
+        }
+        .btn3{
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 50px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #ffb845;
+        }
+        .btn4{
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 50px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn4:hover{
+            color: #ffb845;
+        }
+        
+        .btn5{
+            background-color: #22333b;
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 10px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: white;
+            border:none;
+        }
+        .btn5:hover{
+            background-color: #ffb845;
+            color: #22333b;
+        }
+        
+       
+        footer{
+            background-color: #05014a;
+            width: 100%;
+            height: 4rem;
+            padding: 1rem;
+            margin-top:50px;
+
+        }
+      
+        .a51-footer{
+            text-align: center;
+        }
+        
+        
+        .com-name{
+            color: #ffc107;
+            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+
+
+        }
+        .qoute{
+            font-size: 1rem;
+            font-style: italic;
+            color: #ccc;
+        }
+        /*end of header*/
+
+
+    .container {
+      flex: 1;
+      padding-top: 40px;
+    }
+
+    .hero-text img {
+      width: 100%;
+      height: auto;
+      overflow-x: auto;
+      margin-bottom: 30px;
+      display: flex;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .btn-success {
+      background-color: #28a745;
+      border: none;
+      font-weight: bold;
+    }
+
+    .btn-add-subject{
+        border-radius: 0px;
+        background-color: #22333b;
+        color:white;
+    }
+    .btn-add-subject:hover{
+        background-color: #ffb845;
+        color:#22333b;
+    }
+    .btn-go-to-home{
+        border-radius: 0px;
+        background-color: #22333b;
+        color:white;
+    }
+    .btn-go-to-home:hover{
+        background-color: #ffb845;
+        color:#22333b;
+    }
+    .btn-delete{
+        border-radius: 5px;
+        background-color:#932c27;
+        color:white;
+    }
+    .btn-delete:hover{
+        background-color: #722323;
+        color: white;
+    }
+    .btn-edit{
+        border-radius: 5px;
+        background-color: #5E936C;
+        color:white;
+    }
+    .btn-edit:hover{
+        background-color: #3E5F44;
+        color: white;
+    }
+
+    .card-year {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .subject-list {
+      overflow-y: auto;
+      flex-grow: 1;
+    }
+
+    .year-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    .subject-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .subject-item:last-child {
+      border-bottom: none;
+    }
+
+    .btn-warning {
+      border-radius: 20px;
+      padding: 5px 16px;
+      font-weight: bold;
+      color: black;
+      font-size: 0.85rem;
+    }
+
+    .btn-danger {
+      color: white;
+      font-weight: bold;
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 0.85rem;
+    }
+
+    .footer {
+      background-color: #000;
+      padding: 10px;
+      text-align: center;
+      margin-top: 50px;
+      border-radius: 30px 30px 0 0;
+    }
+
+    .footer img {
+      width: 80%;
+      max-width: 800px;
+      height: auto;
+    }
+
+    body.modal-open {
+      backdrop-filter: blur(5px);
+      transition: backdrop-filter 0.3s ease;
+    }
+    * {
+    border-radius: 0 !important;
+}
+#add{
+    background-color: #016531;
+}
+
+    .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-button {
+    padding: 8px 12px;
+    background-color: #22333b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+     margin-top: 8px;
+     font-size: 0.8rem;
+     font-family: 'Poppins', sans-serif;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ffb845;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  
+ .attendance_dropdown {
+    position: relative;
+    border: none;
+}
+
+.attendance_dropdown-button {
+    margin-top: 8px;
+    background: none;          /* Removed background */
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+   font-weight: 600;
+    color: #22333b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.attendance_dropdown-button:focus {
+    outline: none;             /* Optional: removes outline when clicked */
+}
+
+.attendance_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.attendance_dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+     font-weight: bold;
+   font-size: 0.8rem;
+    color: #22333b;
+}
+
+.attendance_dropdown-content a:hover {
+    background-color: #ffb845;
+}
+
+.attendance_dropdown:hover .attendance_dropdown-content {
+    display: block;
+}
+
+  
+  .logs_dropdown {
+    position: relative;
+    border: none;
+}
+
+.logs_dropdown-button {
+    margin-top: 8px;
+    background: none;          /* Removed background */
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+   font-weight: 600;
+    color: #22333b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logs_dropdown-button:focus {
+    outline: none;             /* Optional: removes outline when clicked */
+}
+
+.logs_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.logs_dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+     font-weight: bold;
+   font-size: 0.8rem;
+    color: #22333b;
+}
+
+.logs_dropdown-content a:hover {
+    background-color: #ffb845;
+}
+
+.logs_dropdown:hover .logs_dropdown-content {
+    display: block;
+}
+
+ 

@@ -1,0 +1,39 @@
+
+#logout  {
+    color: white !important;
+    background-color: #1f7902;
+    
+}
+
+#routeWrapper a:hover {
+    background-color: #ffe202;
+    transform: scale(1.03);
+    color: #22333b;
+}
+
+#routeWrapper a {   
+    color: #1f7902;
+}   
+
+#routeWrapper button {
+    color: #1f7902;
+}   
+
+.btn5{
+    background-color: #1f7902;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin-top: 10px;
+    transition: color 0.3s, transform 0.3s;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: white;
+    border:none;
+}
+.btn5:hover{
+    background-color: #ffb845;
+    color: #ffe202;
+}
+

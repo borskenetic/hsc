@@ -20,6 +20,8 @@ class IdCardController extends Controller
             'full_name' => trim("{$student->firstname} {$student->lastname}"),
             'subtitle' => $student->course,
             'id_number' => $student->id_number,
+            'qrcode' => $student->qrcode,
+            'signature' => $student->student_signature,
         ]);
 
         return $img->response('png');
@@ -31,8 +33,6 @@ class IdCardController extends Controller
         $img = $this->idCardTemplate('back');
 
         $this->composeIdCardBack($img, [
-            'qrcode' => $student->qrcode,
-            'signature' => $student->student_signature,
             'emergency_person' => $student->emergency_person,
             'emergency_relationship' => $student->emergency_relationship,
             'emergency_number' => $student->emergency_number,

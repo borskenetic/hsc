@@ -106,7 +106,7 @@
       <div class="footer-logo">
         <div class="marquee-container">
           <div class="marquee">
-            Welcome to Governor Generoso College of Arts, Sciences and Technology
+            Welcome to Hinatuan Southern College
           </div>
         </div>
       </div>

@@ -1,0 +1,156 @@
+/* General Setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Light background for the whole page */
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.article-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+/* --- Main Navigation Bar --- */
+.main-nav-bar {
+    padding: 15px 0;
+    background-color: #fff;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo and University Text */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-uap {
+    font-size: 3em;
+    font-weight: bold;
+    color: #000;
+    /* In a real implementation, you'd use an image or adjust the P color */
+}
+
+.logo-text {
+    font-size: 1.1em;
+    font-weight: 100; /* Extra bold */
+    line-height: 1.1;
+    color: #000;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 100; /* Matches the bold text in the image */
+    padding: 0 15px;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #f7a600; /* Optional: A hover effect */
+}
+
+
+/* Media Query for Responsiveness */
+@media (max-width: 992px) {
+    .top-bar-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .contact-item {
+        margin-right: 10px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+    }
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Center the entire form container */
+.page-wrapper {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  min-height: 100vh;       /* Full screen height */
+  background-color: #f9f9f9;
+}
+
+/* Form box styling */
+.feedback-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  width: 400px;
+  max-width: 90%;
+}
+
+.feedback-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-container input,
+.feedback-container textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.feedback-container button {
+  background-color: #f7a600;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.feedback-container button:hover {
+  background-color: #f7a600;
+}

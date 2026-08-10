@@ -1,0 +1,211 @@
+
+        body {
+            background-color: #f4f6f9;
+        }
+        
+        /*header style sheet*/
+        .header-logo-img {
+            margin-left: 9rem;
+            max-height: 50px; 
+            width: auto;
+        }
+        .school-name{
+            color: #932c27;
+            margin-left: 5px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .btn0{
+            font-weight: 600;
+            font-size: 0.8rem;
+            
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn0:hover{
+            color: #ffb845;
+        }
+        
+        .btn6{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn6:hover{
+            color: #ffb845;
+        }
+        .btn7{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn7:hover{
+            color: #ffb845;
+        }
+        .btn8{
+            font-weight: 600;
+            font-size: 0.8rem;
+            
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn8:hover{
+            color: #ffb845;
+        }
+        .btn4{
+            font-weight: 600;
+            font-size: 0.8rem;
+            
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn4:hover{
+            color: #ffb845;
+        }
+        
+        .btn5{
+            background-color: #22333b;
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: white;
+            border:none;
+        }
+        .btn5:hover{
+            background-color: #ffb845;
+            color: #22333b;
+        }
+        
+        footer{
+            background-color: #05014a;
+            width: 100%;
+            height: 4rem;
+            padding: 1rem;
+
+        }
+       
+        .a51-footer{
+            text-align: center;
+        }
+        .a51-footer h1{
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+        }
+        .com-name{
+            color: #ffc107;
+            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+
+
+        }
+        .qoute{
+            font-size: 1rem;
+            font-style: italic;
+            color: #ccc;
+        }
+        /*end of header*/
+
+        .card {
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .card-header {
+            background-color: #22333b;
+            color: white;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        .form-control-custom {
+            border: 2px solid #ced4da;
+            border-radius: 8px;
+            padding: 10px 15px;
+            transition: 0.3s ease-in-out;
+        }
+        .profile{
+            text-align: right;
+            margin-right: 10rem;
+        }
+
+        .form-control-custom:focus {
+            border-color: #ffb845;
+            box-shadow: 0 0 0 0.2rem rgba(255, 184, 69, 0.25);
+        }
+
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 5px;
+            background-color: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        .btn9 {
+            color: white;
+            padding: 3px;
+            text-decoration: none;
+            text-align: center;
+            min-width: 100px;
+            border-radius: 0px;
+            background-color: #22333b;
+        }
+        .btn9:hover{
+            background-color: #ffb845;
+            color: #22333b;
+        }
+        .btn10 {
+            color: white;
+            padding: 3px;
+            text-decoration: none;
+            text-align: center;
+            min-width: 100px;
+            border-radius: 0px;
+            border: none;
+            background-color: #5E936C;
+        }
+        .btn10:hover{
+            background-color: #3E5F44;
+            color: white;
+        }
+
+        .form-select {
+            border-radius: 8px;
+            padding: 10px;
+        }
+  * {
+    border-radius: 0 !important;
+}

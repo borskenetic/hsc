@@ -1,0 +1,329 @@
+
+    body {
+      background: #f1f5f9;
+      font-family: 'Rubik', sans-serif;
+    }
+    
+    /*header style sheet*/
+        .header-logo-img {
+            margin-left: 9rem;
+            max-height: 50px;
+            width: auto;
+        }
+        .school-name{
+            color: #932c27;
+            margin-left: 5px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .btn0{
+            font-weight: 600;
+            font-size: 0.8rem;
+            
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn0:hover{
+            color: #ffb845;
+        }
+        
+        .btn1{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn1:hover{
+            color: #ffb845;
+        }
+        .btn2{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn2:hover{
+            color: #ffb845;
+        }
+        .btn3{
+            font-weight: 600;
+            font-size: 0.8rem;
+            
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn3:hover{
+            color: #ffb845;
+        }
+        .btn4{
+            font-weight: 600;
+            font-size: 0.8rem;
+            
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn4:hover{
+            color: #ffb845;
+        }
+        
+        .btn5{
+            background-color: #22333b;
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: white;
+            border:none;
+        }
+        .btn5:hover{
+            background-color: #ffb845;
+            color: #22333b;
+        }
+        
+       footer{
+            background-color: #05014a;
+            width: 100%;
+            height: 4rem;
+            padding: 1rem;
+
+        }
+       
+        .a51-footer{
+            text-align: center;
+        }
+
+
+        /*end of header*/
+    .edit-container {
+      max-width: 900px;
+      background: white;
+      border-radius: 30px;
+      padding: 40px;
+      margin: 30px auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .edit-header {
+      background: #016531;
+      color: white;
+      padding: 10px 30px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 0 0 30px 30px;
+      display: inline-block;
+      margin: -60px auto 30px;
+    }
+    .form-label {
+      font-weight: bold;
+      color: #1e293b;
+    }
+    .form-control, .form-select {
+      background: #f8fafc;
+      border: none;
+      border-radius: 50px;
+      height: 45px;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: bold;
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .form-control:focus, .form-select:focus {
+      box-shadow: none;
+      border: 1px solid #3b82f6;
+    }
+    .btn-back, .btn-save {
+      
+      padding: 5px 25px;
+      font-weight: bold;
+    }
+    .btn-back {
+      background: #016531;
+      color: white;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .btn-back:hover{
+      background: #01e602;
+      color: #ffffff;
+    }
+    .btn-save {
+      background: #437057;
+      color: white;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .btn-save:hover {
+      background: green;
+      color: white;
+    }
+    
+    * {
+    border-radius: 0 !important;
+}
+/*Header dropdown button styles*/
+        .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-button {
+    padding: 8px 12px;
+    background-color: #22333b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+     margin-top: 8px;
+     font-size: 0.8rem;
+     font-family: 'Poppins', sans-serif;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ffb845;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  
+ .attendance_dropdown {
+    position: relative;
+    border: none;
+}
+
+.attendance_dropdown-button {
+    margin-top: 8px;
+    background: none;          /* Removed background */
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+   font-weight: 600;
+    color: #22333b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.attendance_dropdown-button:focus {
+    outline: none;             /* Optional: removes outline when clicked */
+}
+
+.attendance_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.attendance_dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+     font-weight: bold;
+   font-size: 0.8rem;
+    color: #22333b;
+}
+
+.attendance_dropdown-content a:hover {
+    background-color: #ffb845;
+}
+
+.attendance_dropdown:hover .attendance_dropdown-content {
+    display: block;
+}
+
+  
+  .logs_dropdown {
+    position: relative;
+    border: none;
+}
+
+.logs_dropdown-button {
+    margin-top: 8px;
+    background: none;          /* Removed background */
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+   font-weight: 600;
+    color: #22333b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logs_dropdown-button:focus {
+    outline: none;             /* Optional: removes outline when clicked */
+}
+
+.logs_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.logs_dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+     font-weight: bold;
+   font-size: 0.8rem;
+    color: #22333b;
+}
+
+.logs_dropdown-content a:hover {
+    background-color: #ffb845;
+}
+
+.logs_dropdown:hover .logs_dropdown-content {
+    display: block;
+}      

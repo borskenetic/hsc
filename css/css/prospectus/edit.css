@@ -1,0 +1,10 @@
+.container h3{
+    color: #932c27;
+    
+}
+.btn{
+    margin-top: 20px;
+}
+* {
+    border-radius: 0 !important;
+}

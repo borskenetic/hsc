@@ -26,6 +26,20 @@
         <div class="alert alert-success patron-dir__alert">{{ session('success') }}</div>
     @endif
 
+    @if(session('error'))
+        <div class="alert alert-danger patron-dir__alert">{{ session('error') }}</div>
+    @endif
+
+    @if ($errors->any())
+        <div class="alert alert-danger patron-dir__alert">
+            <ul class="mb-0">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <div class="patron-dir__toolbar">
         <form action="{{ route('students.index') }}" method="GET" class="patron-dir__filters">
             <div class="patron-dir__field">
@@ -59,12 +73,18 @@
         </form>
     </div>
 
-    <details class="patron-dir__import">
+    <details class="patron-dir__import" @if($errors->has('file') || session('error')) open @endif>
         <summary>Import students from spreadsheet</summary>
         <div class="patron-dir__import-body">
+            <p class="text-muted small mb-2">
+                Upload <strong>HSC-STUDENTS</strong> (.xlsx) with columns:
+                <code>Name</code>, <code>Program</code>, <code>ID</code>, <code>Value Of QR Code</code>,
+                <code>Contact #</code>, <code>Address</code>, <code>Guardian</code>.
+                Matching students are updated by <strong>ID</strong>; names are split into first / middle / last.
+            </p>
             <form action="{{ route('students.import') }}" method="POST" enctype="multipart/form-data" class="d-flex flex-wrap align-items-center gap-2 mb-0">
                 @csrf
-                <input type="file" name="file" class="form-control form-control-sm" accept=".xlsx,.csv" required>
+                <input type="file" name="file" class="form-control form-control-sm" accept=".xlsx,.xls,.csv" required>
                 <button type="submit" class="patron-dir__btn patron-dir__btn--outline">Upload</button>
             </form>
         </div>

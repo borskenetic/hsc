@@ -1,0 +1,435 @@
+
+
+        .card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-label {
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /*header style sheet*/
+        .header-logo-img {
+            margin-left: 9rem;
+            max-height: auto;
+            width: 10%;
+        }
+        
+        
+        .btn0{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 11px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn0:hover{
+            color: #ffb845;
+        }
+        
+        .btn2{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 11px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn2:hover{
+            color: #ffb845;
+        }
+        .btn3{
+            font-weight: 600;
+            font-size: 0.8rem;
+            
+            padding: 5px 15px;
+            margin-top: 11px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn3:hover{
+            color: #ffb845;
+        }
+        .btn4{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn4:hover{
+            color: #ffb845;
+        }
+        
+        .btn5{
+            background-color: #22333b;
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 10px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: white;
+            border:none;
+        }
+        .btn5:hover{
+            background-color: #ffb845;
+            color: #22333b;
+        }
+        .btn8{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn8:hover{
+            color: #ffb845;
+        }
+        
+         footer{
+            background-color: #05014a;
+            width: 100%;
+            height: 4rem;
+            padding: 1rem;
+            margin-top: 27px;
+
+        }
+      
+        .a51-footer{
+            text-align: center;
+        }
+       
+        /*end of header*/
+
+        
+       
+
+        
+
+       
+
+        
+
+* {
+    border-radius: 5 !important;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-button {
+    padding: 8px 12px;
+    background-color: #22333b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+     margin-top: 8px;
+     font-size: 0.8rem;
+     font-family: 'Poppins', sans-serif;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ffb845;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  
+ .attendance_dropdown {
+    position: relative;
+    border: none;
+}
+
+.attendance_dropdown-button {
+    margin-top: 8px;
+    background: none;          /* Removed background */
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+   font-weight: 600;
+    color: #22333b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.attendance_dropdown-button:focus {
+    outline: none;             /* Optional: removes outline when clicked */
+}
+
+.attendance_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.attendance_dropdown-content a {
+  
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+     font-weight: bold;
+   font-size: 0.8rem;
+    color: #22333b;
+}
+
+.attendance_dropdown-content a:hover {
+    background-color: #ffb845;
+}
+
+.attendance_dropdown:hover .attendance_dropdown-content {
+    display: block;
+}
+
+  
+  .logs_dropdown {
+    position: relative;
+    border: none;
+}
+
+.logs_dropdown-button {
+    margin-top: 8px;
+    background: none;          /* Removed background */
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+   font-weight: 600;
+    color: #22333b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logs_dropdown-button:focus {
+    outline: none;             /* Optional: removes outline when clicked */
+}
+
+.logs_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.logs_dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+     font-weight: bold;
+   font-size: 0.8rem;
+    color: #22333b;
+}
+
+.logs_dropdown-content a:hover {
+    background-color: #ffb845;
+}
+
+.logs_dropdown:hover .logs_dropdown-content {
+    display: block;
+}
+/* Toggle and Close Button Styles */
+.toggle-btn,
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+@media(max-width: 1280px){
+    .head{
+        max-width: 100%; height: auto;
+    }
+    .header-logo-img{
+        margin: 0;
+    }
+    
+}
+@media(max-width:1024px ){
+    .header-logo-img{
+        max-width: 100%; height: auto;
+        margin: 0;
+    }
+    /*header button sizes*/
+    .btn0{
+        font-size: 0.5rem;
+    }
+    .attendance_dropdown-button{
+        font-size: 0.5rem;
+    }
+    .btn2{
+        font-size: 0.5rem;
+    }
+    .btn3{
+        font-size: 0.5rem;
+    }
+    .logs_dropdown-button{
+        font-size: 0.5rem;
+    }
+    .btn4{
+        font-size: 0.5rem;
+    }
+    .btn5{
+        font-size: 0.5rem;
+    }
+    .btn8{
+        font-size: 0.5rem;
+    }
+    
+}
+@media(max-width: 768px){
+    .header-logo-img{
+        max-width: 100%;
+        width: 80px;
+        height: auto;
+        margin: 0;
+    }
+    #routeWrapper {
+            display: none !important; /* Important to override Bootstrap */
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            width: 100%;
+            padding: 1rem;
+            z-index: 1000;
+            text-align: center;
+        }
+    
+        #routeWrapper.open {
+            display: flex !important;
+        }
+    
+        #customMenuToggle {
+            display: block !important;
+            margin-left: auto;
+        }
+    
+        #customMenuClose {
+            display: block !important;
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }
+    .head{
+        max-width: 100%; height: auto;
+    }
+    
+}
+@media(max-width: 398px){
+    .header-logo-img{
+        max-width: 100%;
+        width: 70px;
+        height: auto
+    }
+    .head{
+        max-width: 100%; height: auto;
+        
+    }
+  
+   
+    .btn-superuser{
+        padding: 5px;
+    }
+    .form-select{
+        width: 15rem !important;
+    }
+    
+}
+
+
+ body {
+            background-color: #f5f7fa;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .card {
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-sm {
+            padding: 0.3rem 0.6rem;
+            font-size: 0.875rem;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
+
+        .badge-role {
+            padding: 5px 10px;
+            border-radius: 8px;
+            color: black;
+            
+        }
+
+        .badge-Student {
+            background-color: #0d6efd;
+        }
+
+        .badge-Staff {
+            background-color: #20c997;
+        }
+
+        .badge-Faculty {
+            background-color: #fd7e14;
+        }
+
+        .alert {
+            border-radius: 12px;
+        }

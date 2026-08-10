@@ -1,0 +1,80 @@
+.card{
+    border-radius: 30px;
+    padding-top: 0px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+.content{
+        margin-top: 0px;
+        text-align: center;
+    
+}
+h2{
+    font-weight: bold;
+    width: 20rem;
+    height: 5rem;
+    align-items: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: black;
+}
+.content-tittle{
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: #932c27;
+    
+}
+.form-control{
+    background-color: #edf0f7;
+    border-radius: 50px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.form-label{
+    font-weight: bold;
+}
+.form-select{
+    background-color: #edf0f7;
+    border-radius: 50px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.btn1{
+    background-color: black;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 10px;
+    width: 9rem;
+    transition: color 0.3s, transform 0.3s;
+    height: auto;
+    margin-left: 1rem;
+}
+.btn1:hover{
+    background-color: darkred;
+    color: yellow;
+}
+.btn2{
+    background-color: #932c27;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 10px;
+    width: 9rem;
+    transition: color 0.3s, transform 0.3s;
+    height: auto;
+    margin-right: 1rem;
+}
+.btn2:hover{
+    background-color: darkred;
+    color: yellow;
+}
+
+* {
+    border-radius: 0 !important;
+}

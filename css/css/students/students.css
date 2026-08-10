@@ -1,0 +1,559 @@
+
+        body {
+            background-color: #f4f6f9;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        /*header style sheet*/
+        .header-logo-img {
+            margin-left: 9rem;
+            max-height: 50px;
+            width: auto;
+        }
+        .school-name{
+            color: #932c27;
+            margin-left: 5px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .btn1{
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 50px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn1:hover{
+            color: #ffb845;
+        }
+        .btn0{
+            font-weight: 600;
+            font-size: 0.8rem;
+            
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn0:hover{
+            color: #ffb845;
+        }
+        
+        .btn2{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn2:hover{
+            color: #ffb845;
+        }
+        .btn7{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn7:hover{
+            color: #ffb845;
+        }
+        .btn8{
+            font-weight: 600;
+            font-size: 0.8rem;
+            
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn8:hover{
+            color: #ffb845;
+        }
+        .btn3{
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 50px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn3:hover{
+            color: #ffb845;
+        }
+        .btn4{
+            font-weight: 600;
+            font-size: 0.8rem;
+            
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn4:hover{
+            color: #ffb845;
+        }
+        
+        .btn5{
+            background-color: #22333b;
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: white;
+            border:none;
+        }
+        .btn5:hover{
+            background-color: #ffb845;
+            color: #22333b;
+        }
+        
+        footer{
+            background-color: #05014a;
+            width: 100%;
+            height: 4rem;
+            padding: 1rem;
+
+        }
+       
+        .a51-footer{
+            text-align: center;
+        }
+        .a51-footer h1{
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+        }
+        .com-name{
+            color: #ffc107;
+            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+
+
+        }
+        .qoute{
+            font-size: 1rem;
+            font-style: italic;
+            color: #ccc;
+        }
+        /*end of header*/
+
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #22333b;
+            color: white;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .btn-edit {
+            background-color: #5E936C;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+         .btn-edit:hover {
+            background-color: #3E5F44;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        .btn-delete {
+            background-color: #932c27;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+        .btn-delete:hover {
+            background-color:#722323;
+            color:white;
+        }
+
+        .btn-add {
+            background-color: #016531;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+        }
+        .btn-add:hover {
+            background-color:#01e602;
+            color:#ffffff;
+            
+        }
+        .btn-back{
+            background-color:#016531;
+            color: white;
+        }
+         .btn-back:hover{
+            background-color:#01e602;
+            color:#ffffff;
+        }
+      
+
+        .table thead {
+            background-color: #ffc966;
+        }
+
+        .table td, .table th {
+            vertical-align: middle !important;
+        }
+
+        .table tbody tr {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .table tbody tr:hover {
+            background-color: #fff3cd;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            
+            border: 2px solid #ccc;
+            transition: transform 0.2s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #888;
+        }
+        * {
+    border-radius: 0 !important;
+}
+#stud{
+    background-color: #016531;
+}
+#rs{
+    background-color: #016531;
+}
+#rp{
+    background-color: #016531;
+    color: #ffffff;
+}
+#rp:hover{
+            background-color: #01e602;
+}
+
+    /*Header dropdown button styles*/
+        .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-button {
+    padding: 8px 12px;
+    background-color: #22333b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+     margin-top: 8px;
+     font-size: 0.8rem;
+     font-family: 'Poppins', sans-serif;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ffb845;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  
+ .attendance_dropdown {
+    position: relative;
+    border: none;
+}
+
+.attendance_dropdown-button {
+    margin-top: 8px;
+    background: none;          /* Removed background */
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+   font-weight: 600;
+    color: #22333b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.attendance_dropdown-button:focus {
+    outline: none;             /* Optional: removes outline when clicked */
+}
+
+.attendance_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.attendance_dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+     font-weight: bold;
+   font-size: 0.8rem;
+    color: #22333b;
+}
+
+.attendance_dropdown-content a:hover {
+    background-color: #ffb845;
+}
+
+.attendance_dropdown:hover .attendance_dropdown-content {
+    display: block;
+}
+
+  
+  .logs_dropdown {
+    position: relative;
+    border: none;
+}
+
+.logs_dropdown-button {
+    margin-top: 8px;
+    background: none;          /* Removed background */
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+   font-weight: 600;
+    color: #22333b;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logs_dropdown-button:focus {
+    outline: none;             /* Optional: removes outline when clicked */
+}
+
+.logs_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.logs_dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+     font-weight: bold;
+   font-size: 0.8rem;
+    color: #22333b;
+}
+
+.logs_dropdown-content a:hover {
+    background-color: #ffb845;
+}
+
+.logs_dropdown:hover .logs_dropdown-content {
+    display: block;
+}
+/* Toggle and Close Button Styles */
+.toggle-btn,
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+@media(max-width: 1280px){
+    .head{
+        max-width: 100%; height: auto;
+    }
+    .header-logo-img{
+        margin: 0;
+    }
+    
+}
+@media(max-width:1024px ){
+    .header-logo-img{
+        max-width: 100%; height: auto;
+        margin: 0;
+    }
+    /*header button sizes*/
+    .btn0{
+        font-size: 0.5rem;
+    }
+    .attendance_dropdown-button{
+        font-size: 0.5rem;
+    }
+    .btn2{
+        font-size: 0.5rem;
+    }
+    .btn3{
+        font-size: 0.5rem;
+    }
+    .logs_dropdown-button{
+        font-size: 0.5rem;
+    }
+    .btn4{
+        font-size: 0.5rem;
+    }
+    .btn5{
+        font-size: 0.5rem;
+    }
+    .btn8{
+        font-size: 0.5rem;
+    }
+    
+}
+@media(max-width: 768px){
+    .header-logo-img{
+        max-width: 100%;
+        width: 80px;
+        height: auto;
+        margin: 0;
+    }
+    #routeWrapper {
+            display: none !important; /* Important to override Bootstrap */
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            width: 100%;
+            padding: 1rem;
+            z-index: 1000;
+            text-align: center;
+        }
+    
+        #routeWrapper.open {
+            display: flex !important;
+        }
+    
+        #customMenuToggle {
+            display: block !important;
+            margin-left: auto;
+        }
+    
+        #customMenuClose {
+            display: block !important;
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }
+    .head{
+        max-width: 100%; height: auto;
+    }
+    
+}
+@media(max-width: 398px){
+    .header-logo-img{
+        max-width: 100%;
+        width: 70px;
+        height: auto
+    }
+    .head{
+        max-width: 100%; height: auto;
+        
+    }
+    .button_div{
+        display: flex;
+        direction: column;
+    }
+    .form-select{
+        width: 22rem !important;
+        margin: auto !important;
+    }
+    .btn-superuser{
+        padding: 5px;
+    }
+    .form-select{
+        width: 15rem !important;
+    }
+    
+}
+
+/* --- FIX DROPDOWN OVERFLOW IN TABLE --- */
+
+.table {
+    overflow: visible !important;
+}
+
+.table-responsive {
+    overflow: visible !important;
+}
+
+.table thead, 
+.table tbody, 
+.table tr,
+.table td,
+.table th {
+    overflow: visible !important;
+    position: relative !important;
+}
+
+.dropdown-menu {
+    position: absolute !important;
+    z-index: 9999 !important;
+    inset: auto !important;
+    transform: translate(0, 0) !important;
+}

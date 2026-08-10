@@ -1,0 +1,718 @@
+ body {
+            background-color: #f5f7fa;
+            font-family: 'Segoe UI', sans-serif;
+            color: #333;
+        }
+        
+        /*header style sheet*/
+        .header-logo-img {
+            margin-left: 9rem;
+            max-height: auto;
+            width: 10%;
+        }
+        
+        .school-name{
+            color: red;
+            margin-left: 5px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+        .btn0{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 11px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #016531;
+        }
+        
+        .btn1{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn1:hover{
+            color: #ffb845;
+        }
+        .btn2{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 11px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #016531;
+        }
+        .btn2:hover{
+            color: #01e602;
+        }
+        .btn3{
+            font-weight: 600;
+            font-size: 0.8rem;
+            
+            padding: 5px 15px;
+            margin-top: 11px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn3:hover{
+            color: #ffb845;
+        }
+        .btn4{
+            font-weight: 600;
+            font-size: 0.8rem;
+           
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: #22333b;
+        }
+        .btn4:hover{
+            color: #ffb845;
+        }
+        
+        .btn5{
+            background-color: #016531;
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 10px;
+            padding: 5px 15px;
+            margin-top: 10px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            color: white;
+            border:none;
+        }
+        .btn5:hover{
+            background-color: #01e602;
+            color: #ffffff;
+        }
+        
+        footer {
+            background-color: #1c2b2d;
+            color: white;
+            text-align: center;
+            padding: 0.1rem;
+            font-size: 5px;
+            margin-top: auto;
+        }
+       
+        .a51-footer{
+            text-align: center;
+        }
+        .a51-footer h1{
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+        }
+        .com-name{
+            color: #ffc107;
+            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+
+
+        }
+        .qoute{
+            font-size: 1rem;
+            font-style: italic;
+            color: #ccc;
+        }
+        /*end of header*/
+
+        .btn {
+            
+            font-weight: 600;
+            padding: 6px 12px;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
+
+        .card {
+           /* border-radius: 12px;*/
+            background-color: #fff;
+            border: none;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+        }
+
+        .img-thumbnail {
+           /* border-radius: 8px;*/
+            max-height: 60px;
+        }
+
+        .text-success { font-weight: bold; }
+        .text-danger { font-weight: bold; }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+           
+            object-fit: cover;
+            
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-addbook, .btn-student-report, .btn-e-book, .btn-rfid, .btn-filter,
+        .btn-all, .btn-available, .btn-borrowed, .btn-delete, .btn-edit, .btn-search {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-addbook {
+            background-color: white;
+            color: #016531;
+            padding: 7px 50px;
+            font-weight: bold;
+        }
+        .btn-addbook:hover {
+            background-color: #01e602;
+            color: #ffffff;
+        }
+        
+        
+        .btn-51_learn {
+            background-color: #22333b;
+            color: white;
+            padding: 7px 50px;
+            font-weight: bold;
+        }
+        .btn-51_learn:hover {
+            background-color: #ffb845;
+            color: #22333b;
+        }
+        
+
+        .btn-student-report {
+            background-color: #22333b;
+            color: white;
+            padding: 7px 70px;
+            font-weight: bold;
+        }
+        .btn-student-report:hover {
+            background-color: #ffb845;
+            color: #22333b;
+        }
+
+        .btn-e-book {
+            background-color: white;
+            color: #016531;
+            padding: 7px 40px;
+            font-weight: bold;
+        }
+        .btn-e-book:hover {
+            background-color: #01e602;
+            color: #ffffff;
+        }
+        .btn-superuser {
+            background-color: white;
+            color: #22333b;
+            padding: 7px 40px;
+            font-weight: bold;
+        }
+        .btn-superuser:hover {
+            background-color: #ffb845;
+            color: #22333b;
+        }
+
+        .btn-rfid {
+            background-color: #22333b;
+            color: white;
+            padding: 7px 40px;
+            font-weight: bold;
+           
+        }
+        .btn-rfid:hover {
+            background-color: #ffb845;
+            color: #22333b;
+        }
+
+        .btn-filter {
+            background-color: #016531;
+            color: white;
+            padding: 7px 25px;
+            font-weight: bold;
+        }
+        .btn-filter:hover {
+            background-color: #01e602;
+            color: #ffffff;
+        }
+
+        .btn-all, .btn-available, .btn-borrowed {
+            background-color: white;
+            color: black;
+         
+            font-weight: bold;
+        }
+        .btn-all:hover {
+            background-color: black;
+            color: yellow;
+        }
+        .btn-available:hover {
+            background-color: green;
+            color: yellow;
+        }
+        .btn-borrowed:hover {
+            background-color: #932c27;
+            color: #ffb845;
+        }
+
+        .btn-delete {
+            background-color: #932c27;
+            color: white;
+            
+        }
+        .btn-delete:hover {
+            background-color: #722323;
+            color: white;
+        }
+        .btn-edit {
+            background-color: #5E936C;
+            color: white;
+        }
+        .btn-edit:hover {
+            background-color: #3E5F44;
+            color: white;
+        }
+        .btn-view {
+            background-color: #22333b;
+            color: white;
+        }
+        .btn-view:hover {
+            background-color: #ffb845;
+            color: #22333b;
+        }
+        
+        .btn-import{
+            background-color: #437057;
+            color: white;
+        }
+         .btn-import:hover {
+            background-color: #2F5249;
+            color: white;
+        }
+        .btn-export{
+            background-color: #932c27;
+            color: white;
+        }
+         .btn-export:hover {
+            background-color: darkred;
+            color: white;
+        }
+
+        .search-bar {
+            padding: 0.6rem 1rem;
+            /*border-radius: 30px;*/
+            font-size: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #ced4da;
+            box-shadow: inset 1px 1px 3px rgba(0,0,0,0.05);
+            transition: border 0.2s, box-shadow 0.2s;
+        }
+        .form-control{
+            width: 150rem;
+        }
+
+        .btn-search {
+            padding: 5px 50px;
+            background-color: white;
+            color: #016531;
+            font-weight: bold;
+            border: none;
+            
+        }
+        .btn-search:hover {
+            background-color: #01e602;
+            transform: scale(1.03);
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .btn-search, .btn-addbook, .btn-filter, .btn-student-report, .btn-e-book, .btn-rfid,
+            .btn-all, .btn-available, .btn-borrowed {
+                width: 100% !important;
+                padding: 10px 0;
+            }
+
+            .d-flex.flex-wrap.gap-2, .row.mb-3.g-2.align-items-center, .d-flex.flex-wrap.justify-content-between {
+                flex-direction: column !important;
+                align-items: stretch !important;
+            }
+        }
+        /* Add this in your CSS or <style> */
+        .page-transition {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .page-transition-active {
+            opacity: 1;
+        }
+        .form-control {
+    width: 100%;
+    max-width: 100%;
+}
+
+    /* Change text and border color of pagination links */
+    .pagination .page-link {
+        color: #22333b;
+        border-color: #22333b;
+    }
+
+    /* On hover */
+    .pagination .page-link:hover {
+        background-color: #22333b;
+        color: white;
+    }
+
+    /* Active page */
+    .pagination .page-item.active .page-link {
+        background-color: #22333b;
+        border-color: #22333b;
+        color: white;
+    }
+
+
+* {
+    border-radius: 5 !important;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-button {
+    padding: 8px 12px;
+    background-color: #22333b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+     margin-top: 8px;
+     font-size: 0.8rem;
+     font-family: 'Poppins', sans-serif;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ffb845;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  
+  
+ .attendance_dropdown {
+    position: relative;
+    border: none;
+}
+
+.attendance_dropdown-button {
+    margin-top: 8px;
+    background: none;          /* Removed background */
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+   font-weight: 600;
+    color: #016531;
+    font-family: 'Poppins', sans-serif;
+}
+
+.attendance_dropdown-button:focus {
+    outline: none;             /* Optional: removes outline when clicked */
+}
+
+.attendance_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.attendance_dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+     font-weight: bold;
+   font-size: 0.8rem;
+    color: #016531;
+}
+
+.attendance_dropdown-content a:hover {
+    background-color: #01e602;
+}
+
+.attendance_dropdown:hover .attendance_dropdown-content {
+    display: block;
+}
+
+  
+  .logs_dropdown {
+    position: relative;
+    border: none;
+}
+
+.logs_dropdown-button {
+    margin-top: 8px;
+    background: none;          /* Removed background */
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+   font-weight: 600;
+    color: #016531;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logs_dropdown-button:focus {
+    outline: none;             /* Optional: removes outline when clicked */
+}
+
+.logs_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.logs_dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+     font-weight: bold;
+   font-size: 0.8rem;
+    color: #016531;
+}
+
+.logs_dropdown-content a:hover {
+    background-color: #01e602;
+}
+
+.logs_dropdown:hover .logs_dropdown-content {
+    display: block;
+}
+/*Books actions dropdown styles*/
+
+/* Show dropdown on hover */
+/* Wrapper for dropdown */
+
+.table-responsive {
+  overflow: visible !important;
+}
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
+
+/* Actions button */
+.dropdown1-button {
+  background-color: #1f2937; /* Dark Gray */
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for button */
+.dropdown1-button:hover {
+  background-color: #111827;
+}
+
+/* Dropdown menu */
+.dropdown1-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  border-radius: 4px;
+  margin-top: 0;
+}
+
+/* Dropdown links and button */
+.dropdown1-content a,
+.dropdown1-content button {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  color: #1f2937;
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item1:hover{
+    background-color: black;
+    color: white;
+}
+.dropdown-item2:hover{
+    background-color: #3E5F44;
+    color: white;
+}
+.dropdown-item3:hover{
+    background-color: darkred;
+    color: white;
+}
+
+/* Show dropdown on hover */
+.dropdown1:hover .dropdown1-content {
+  display: block;
+}
+
+/* Toggle and Close Button Styles */
+.toggle-btn,
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+@media(max-width: 1280px){
+    .head{
+        max-width: 100%; height: auto;
+    }
+    
+}
+@media(max-width:1024px ){
+    .header-logo-img{
+        max-width: 100%; height: auto;
+        margin: 0;
+    }
+    /*header button sizes*/
+    .btn0{
+        font-size: 0.7rem;
+    }
+    .attendance_dropdown-button{
+        font-size: 0.7rem;
+    }
+    .btn2{
+        font-size: 0.7rem;
+    }
+    .btn3{
+        font-size: 0.7rem;
+    }
+    .logs_dropdown-button{
+        font-size: 0.7rem;
+    }
+    .btn4{
+        font-size: 0.7rem;
+    }
+    .btn5{
+        font-size: 0.7rem;
+    }
+    
+}
+@media(max-width: 768px){
+    .header-logo-img{
+        max-width: 100%;
+        width: 80px;
+        height: auto;
+        margin: 0;
+    }
+    #routeWrapper {
+            display: none !important; /* Important to override Bootstrap */
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            width: 100%;
+            padding: 1rem;
+            z-index: 1000;
+            text-align: center;
+        }
+    
+        #routeWrapper.open {
+            display: flex !important;
+        }
+    
+        #customMenuToggle {
+            display: block !important;
+            margin-left: auto;
+        }
+    
+        #customMenuClose {
+            display: block !important;
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }
+    .head{
+        max-width: 100%; height: auto;
+    }
+    
+}
+@media(max-width: 398px){
+    .header-logo-img{
+        max-width: 100%;
+        width: 70px;
+        height: auto
+    }
+    .head{
+        max-width: 100%; height: auto;
+        
+    }
+    .button_div{
+        display: flex;
+        direction: column;
+    }
+    .form-select{
+        width: 22rem !important;
+        margin: auto !important;
+    }
+    .btn-superuser{
+        padding: 5px;
+    }
+    
+}

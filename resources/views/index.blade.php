@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $brand['school_name'] }} | Home</title>
+    <title>Hinatuan Southern College | Home</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Favicon -->
-    <link rel="icon" type="{{ $brand['favicon_mime'] ?? 'image/x-icon' }}" href="{{ $brand['favicon_url'] }}">
+    <link rel="icon" type="image/jpeg" href="images/hsclogo.jpg">
 </head>
 
 <body>
+
     <!-- ===========================
          HEADER
     ============================ -->
@@ -21,24 +27,24 @@
 
         <div class="header-container">
 
-            <a class="logo-section" href="{{ route('home') }}">
+            <a class="logo-section" href="#home">
 
-                <img src="{{ $brand['logo_compact_url'] ?: asset('images/moistlogo.jpg') }}" class="logo-icon" alt="{{ $brand['school_name'] }} Logo">
+                <img src="images/hsclogo.jpg" class="logo-icon" alt="Hinatuan Southern College Seal">
 
                 <div class="logo-text">
-                    <h2>{{ $brand['school_name'] }}</h2>
+                    <h2>Hinatuan Southern College</h2>
+                    <span>Hinatuan, Surigao del Sur &middot; Est. 2004</span>
                 </div>
 
             </a>
 
             <nav id="main-nav">
-
-                <a href="#about">ABOUT</a>
-                <a href="{{ route('landing') }}">OPAC</a>
+                <a href="#">ABOUT</a></li>
+                <a href="{{ route('landing') }}" >OPAC</a>
                 <a href="{{ $brand['zendy_url'] }}">ZENDY</a>
                 <a href="#">CONTACT US</a>
                 <a href="{{ url('/rooms/book') }}">ROOM RESERVATIONS</a>
-                <a href="{{ route('feedback.create') }}" class="feedback-link">FEEDBACK</a>
+                <a href="{{ route('feedback.create') }}" class="feedback-link" >FEEDBACK</a>
                 <a href="{{ route('login') }}" class="login-button">LOGIN</a>
 
             </nav>
@@ -59,17 +65,16 @@
          HERO SECTION
     ============================ -->
 
-    <section class="hero">
+    <section class="hero" id="home">
 
-        <div class="hero-content">
 
-            <!-- Video -->
+          <!-- Video -->
 
             <div class="hero-video">
 
                 <video autoplay muted loop playsinline controls preload="auto">
 
-                    <source src="{{ asset('videos/howToRegister-zendy.mp4') }}" type="video/mp4">
+                    <source src="videos/howToRegister-zendy.mp4" type="video/mp4">
 
                     Your browser does not support the video tag.
 
@@ -78,14 +83,18 @@
             </div>
 
 
-            <!-- OPAC SEARCH -->
+        <div class="hero-rays" aria-hidden="true"></div>
+
+    
+            <!-- PROGRAM FINDER -->
 
             <div class="hero-search">
 
-                <h2>Library OPAC</h2>
+                <span class="card-eyebrow">Quick Finder</span>
+                <h2>Library OPAC </h2>
 
                 <p>
-                    Search books, journals, theses,
+                   Search books, journals, theses,
                     and other library resources.
                 </p>
 
@@ -105,6 +114,8 @@
 
                 </form>
 
+                
+
             </div>
 
         </div>
@@ -114,10 +125,15 @@
 
 
     <!-- ===========================
-         WELCOME SECTION
+         WELCOME / ABOUT SECTION
     ============================ -->
 
     <section class="welcome-section" id="about">
+
+        <div class="welcome-badge" aria-hidden="true">
+            <span>EST.</span>
+            <strong>2004</strong>
+        </div>
 
         <div class="welcome-text">
 
@@ -126,22 +142,18 @@
             </span>
 
             <h1 id="typing-title">
-
-                Misamis Oriental Institute of Science
-                and Technology (MOIST)
-
+                Hinatuan Southern College
             </h1>
 
             <p class="welcome-description">
-
-                Explore our website today to learn more about our academic
-                offerings, research opportunities, student support services,
-                and exciting campus life. Join us in shaping the future and
-                making a difference in the world.
-
+                For over two decades, HSC has stood as a beacon of learning on the
+                southern shores of Surigao del Sur — the open book and rising flame
+                on our seal a promise to every student who walks through our doors.
+                We build practical skills, critical minds, and a lasting sense of
+                community that carries our graduates far beyond Hinatuan.
             </p>
 
-            <a href="#" class="learn-btn">
+            <a href="#programs" class="learn-btn">
                 Learn More
             </a>
 
@@ -152,110 +164,114 @@
 
 
     <!-- ===========================
-         LATEST COURSES
+         PROGRAMS & NEWS
     ============================ -->
 
-    <section class="info-section">
+    <section class="info-section" id="programs">
 
-        <div class="info-courses">
+        <div class="info-programs">
 
-            <h2 class="typing-courses">Latest Courses</h2>
+            <span class="info-badge" aria-hidden="true"></span>
+            <h2 class="typing-courses">Academic Programs</h2>
 
             <p>
-
-                "Explore cutting-edge topics in our latest courses,
-                designed to empower students with practical knowledge
-                and skills for today's rapidly changing world."
-
+                From business and education to information technology and the
+                trades, our programs are built around real work in our region —
+                practical, hands-on, and ready for the world beyond graduation.
             </p>
+
+            <a href="#" class="text-link">View all programs &rarr;</a>
 
         </div>
 
 
-        <div class="info-news">
+        <div class="info-news" id="news">
 
-            <h3 class="typing-news">News & Events</h3>
+            <span class="info-badge" aria-hidden="true"></span>
+            <h3 class="typing-news">News &amp; Events</h3>
 
             <p>
-
-                Stay informed with the latest campus announcements,
-                seminars, workshops, academic activities,
-                and upcoming events at MOIST.
-
+                Stay informed with enrollment schedules, seminars, workshops,
+                academic activities, and upcoming events happening around
+                the HSC campus.
             </p>
+
+            <a href="#" class="text-link">See what's happening &rarr;</a>
 
         </div>
 
     </section>
-    
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
+
+
     <!-- ===========================
          FOOTER
     ============================ -->
 
-    <footer>
+    <footer id="contact">
 
-    <div class="footer-container">
+        <div class="footer-container">
 
-        <!-- Column 1 -->
 
-        <div class="footer-column">
+            <!-- Column 2 -->
 
-            <h3>INFORMATION</h3>
+            <div class="footer-column">
 
-            <ul>
+                <h3>INFORMATION</h3>
 
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Terms of Use</a></li>
+                <ul>
 
-            </ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#programs">Academic Programs</a></li>
+                    <li><a href="#news">News &amp; Events</a></li>
+                    <li><a href="#admissions">Admissions</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Column 3 -->
+
+            <div class="footer-column">
+
+                <h3>STUDENT HELP</h3>
+
+                <ul>
+
+                    <li><a href="#portal">Student Portal</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">Downloadable Forms</a></li>
+                    <li><a href="#programs">Latest Programs</a></li>
+                    <li><a href="#news">Academic Calendar</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Column 4 -->
+
+            <div class="footer-column">
+
+                <h3>CONTACT</h3>
+
+                <p>Poblacion, Hinatuan</p>
+                <p>Surigao del Sur, Philippines</p>
+                <p>&#9742; (086) 000-0000</p>
+                <p>&#9993; info@hsc.edu.ph</p>
+
+            </div>
 
         </div>
 
-        <!-- Column 2 -->
-
-        <div class="footer-column">
-
-            <h3>STUDENT HELP</h3>
-
-            <ul>
-
-                <li><a href="#">Get Started</a></li>
-                <li><a href="#">My Questions</a></li>
-                <li><a href="#">Download Files</a></li>
-                <li><a href="#">Latest Courses</a></li>
-                <li><a href="#">Academic News</a></li>
-
-            </ul>
-
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hinatuan Southern College. All rights reserved.</p>
         </div>
- <div class="footer-column">
-
-            <h3>CONTACT</h3>
-
-            <p>Sta. Cruz, Cogon, Balingasag</p>
-
-            <p>Misamis Oriental</p>
-
-            <p>☎ PLDT: (088)-855-2885</p>
-
-            <p>✉ moist@moist.edu.ph</p>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; {{ date('Y') }} MOIST. All rights reserved.</p>
-    </div>
 
     </footer>
-
-    <!-- JavaScript -->
-
-    <script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 </html>

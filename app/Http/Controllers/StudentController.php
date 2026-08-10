@@ -739,19 +739,43 @@ class StudentController extends Controller
     public function import(Request $request)
     {
         $request->validate([
-            'file' => 'required|mimes:xlsx,csv',
+            'file' => 'required|file|mimes:xlsx,xls,csv|max:10240',
         ]);
 
-        Excel::import(new StudentsImport, $request->file('file'));
+        try {
+            $import = new StudentsImport;
+            Excel::import($import, $request->file('file'));
+        } catch (\Throwable $e) {
+            report($e);
+
+            return redirect()->back()->with(
+                'error',
+                'Student import failed. Check that the file uses the expected columns (Name, Program, ID, Value Of QR Code, Contact #, Address, Guardian).'
+            );
+        }
+
+        $summary = sprintf(
+            'Students imported: %d created, %d updated, %d skipped.',
+            $import->created,
+            $import->updated,
+            $import->skipped
+        );
 
         AdminActivityLogger::staff(
             AdminActivity::TYPE_PATRON,
             'Students imported',
-            'Bulk import from spreadsheet',
+            $summary,
             route('students.index'),
             'patron',
         );
 
-        return redirect()->back()->with('success', 'Students imported successfully.');
+        if ($import->created === 0 && $import->updated === 0) {
+            return redirect()->back()->with(
+                'error',
+                $summary.' No students were saved. Confirm the spreadsheet has a header row and data rows.'
+            );
+        }
+
+        return redirect()->back()->with('success', $summary);
     }
 }

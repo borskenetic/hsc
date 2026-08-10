@@ -54,31 +54,32 @@ trait ComposesLibraryIdCard
     }
 
     /**
-     * @param  array{photo:?string,full_name:string,subtitle:?string,id_number:?string}  $data
+     * @param  array{photo:?string,full_name:string,subtitle:?string,id_number:?string,qrcode:?string}  $data
      */
-    protected function composeIdCardFront($img, array $data)
+   protected function composeIdCardFront($img, array $data)
     {
+        
         $photoPath = PublicAssetPath::resolve($data['photo'] ?? null);
         if ($photoPath) {
-            $profile = Image::make($photoPath)->resize(1045, 1045);
-            $img->insert($profile, 'center', 5, -390);
+            $profile = Image::make($photoPath)->resize(298, 315);
+            $img->insert($profile, 'center', -337,-15);
         }
-
+        
         $fontPath = public_path('fonts/arial.ttf');
 
-        $img->text($data['full_name'], 1100, 2090, function ($font) use ($fontPath) {
+        $img->text($data['full_name'], 650, 340, function ($font) use ($fontPath) {
             $font->file($fontPath);
-            $font->size(150);
-            $font->color('#000');
+            $font->size(70);
+            $font->color('#fffff');
             $font->align('center');
             $font->valign('top');
         });
 
         if (! empty($data['subtitle'])) {
-            $img->text(trim($data['subtitle']), 1100, 2355, function ($font) use ($fontPath) {
+            $img->text(trim($data['subtitle']), 660, 415, function ($font) use ($fontPath) {
                 $font->file($fontPath);
-                $font->size(150);
-                $font->color('#000');
+                $font->size(18);
+                $font->color('#fffff');
                 $font->align('center');
                 $font->valign('top');
             });
@@ -86,24 +87,47 @@ trait ComposesLibraryIdCard
 
         if (! empty($data['id_number'])) {
             $idNumber = trim($data['id_number']);
-            $idFontSize = 100;
+            $idFontSize = 40;
             foreach ([[-2, 0], [2, 0], [0, -2], [0, 2], [-2, -2], [-2, 2], [2, -2], [2, 2]] as [$ox, $oy]) {
-                $img->text($idNumber, 1090 + $ox, 1890 + $oy, function ($font) use ($fontPath, $idFontSize) {
+                $img->text($idNumber, 170 + $ox, 480 + $oy, function ($font) use ($fontPath, $idFontSize) {
                     $font->file($fontPath);
                     $font->size($idFontSize);
-                    $font->color('#000');
+                    $font->color('fffff');
                     $font->align('center');
                     $font->valign('top');
                 });
             }
         }
 
+        if (! empty($data['qrcode'])) {
+            $qrPng = QrCode::format('png')
+                ->size(145)
+                ->margin(0)
+                ->generate($data['qrcode']);
+            $qrImage = Image::make((string) $qrPng);
+            $img->insert($qrImage, 'top-left',  825, 152);
+            
+        
+         $signaturePath = PublicAssetPath::resolve($data['signature'] ?? null);
+
+        if ($signaturePath) {
+            $signature = Image::make($signaturePath)
+                ->resize(100, 110)
+                ->greyscale()          // Convert to grayscale
+                ->invert()             // Invert colors (if needed)
+                ->colorize(100, 100, 100); // Make it white
+        
+            $img->insert($signature, 'center', -320, 215);
+        }
+        
+        }
+        
+
         return $img;
     }
 
     /**
      * @param  array{
-     *     qrcode:string,
      *     signature:?string,
      *     emergency_person:?string,
      *     emergency_relationship:?string,
@@ -113,32 +137,20 @@ trait ComposesLibraryIdCard
      */
     protected function composeIdCardBack($img, array $data)
     {
-        $qrPng = QrCode::format('png')
-            ->size(900)
-            ->margin(0)
-            ->generate($data['qrcode']);
-        $qrImage = Image::make((string) $qrPng);
-        $img->insert($qrImage, 'top-left', 655, 435);
-
-        $signaturePath = PublicAssetPath::resolve($data['signature'] ?? null);
-        if ($signaturePath) {
-            $signature = Image::make($signaturePath)->resize(500, 600);
-            $img->insert($signature, 'center', -30, 1200);
-        }
 
         if (! empty($data['emergency_person'])) {
-            $this->drawIdCardText($img, $data['emergency_person'], 1100, 1650, 100, '#000');
+            $this->drawIdCardText($img, $data['emergency_person'], 260, 110, 60, '#000');
         }
         if (! empty($data['emergency_relationship'])) {
-            $this->drawIdCardText($img, $data['emergency_relationship'], 1100, 1750, 100, '#000');
+            $this->drawIdCardText($img, $data['emergency_relationship'], 260, 170, 50, '#000');
         }
         if (! empty($data['emergency_number'])) {
-            $this->drawIdCardText($img, $data['emergency_number'], 1100, 1850, 100, '#000');
+            $this->drawIdCardText($img, $data['emergency_number'], 260, 220, 60, '#000');
         }
 
         if (! empty($data['birth_date'])) {
-            $formattedDate = Carbon::parse($data['birth_date'])->format('m-d-Y');
-            $this->drawIdCardText($img, $formattedDate, 3000, 800, 300, '#000');
+            $formattedDate = Carbon::parse($data['birth_date'])->format('F d, Y');
+            $this->drawIdCardText($img, $formattedDate, 260, 380, 50, '#000');
         }
 
         return $img;

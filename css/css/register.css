@@ -1,0 +1,132 @@
+
+    body {
+        background: #f3f0ff;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .reg-card {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 40px 45px;
+        box-shadow: 0 8px 30px rgba(90, 13, 171, 0.12);
+        width: 100%;
+        max-width: 950px;
+        border-top: 6px solid #5a0dab;
+    }
+
+    h2.title {
+        font-weight: 800;
+        text-align: center;
+        color: #5a0dab;
+        margin-bottom: 30px;
+        letter-spacing: .5px;
+        font-size: 2rem;
+    }
+
+    h5.section-title {
+        margin-top: 35px;
+        font-weight: 700;
+        color: #333;
+        border-left: 5px solid #5a0dab;
+        padding-left: 12px;
+        font-size: 1.1rem;
+    }
+
+    label {
+        font-weight: 600;
+        color: #4a4a4a;
+        font-size: 0.95rem;
+    }
+
+    .form-control,
+    .form-select {
+        border-radius: 10px;
+        padding: 12px 13px;
+        border: 2px solid #e6e0f5;
+        transition: all .2s;
+        font-size: 0.95rem;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #5a0dab;
+        box-shadow: 0 0 0 3px rgba(90, 13, 171, .15);
+    }
+
+    .btn-primary {
+        background: #5a0dab;
+        border: none;
+        padding: 13px 30px;
+        font-size: 17px;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: all .2s;
+        box-shadow: 0 4px 12px rgba(90, 13, 171, 0.25);
+    }
+
+    .btn-primary:hover {
+        background: #440a89;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(90, 13, 171, 0.28);
+    }
+
+    /* ============================
+       MOBILE RESPONSIVE IMPROVEMENTS
+       ============================ */
+    @media (max-width: 768px) {
+
+        body {
+            padding: 10px;
+        }
+
+        .reg-card {
+            padding: 25px 20px;
+            border-radius: 14px;
+        }
+
+        h2.title {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        h5.section-title {
+            font-size: 1rem;
+            margin-top: 25px;
+        }
+
+        .row > div {
+            margin-bottom: 10px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 14px 0;
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2.title {
+            font-size: 1.4rem;
+        }
+
+        .reg-card {
+            padding: 20px 15px;
+        }
+
+        label {
+            font-size: 0.9rem;
+        }
+
+        .form-control,
+        .form-select {
+            padding: 10px 12px;
+            font-size: 0.9rem;
+        }
+    }
+

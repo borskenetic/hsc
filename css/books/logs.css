@@ -562,54 +562,8 @@
 }
 
 .circulation-table__title {
-    max-width: 220px;
-    min-width: 0;
-}
-
-.circ-book-title-trigger {
-    display: block;
-    max-width: 220px;
     font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    cursor: default;
-    outline: none;
-}
-
-.circ-book-title-trigger:hover,
-.circ-book-title-trigger:focus-visible {
-    color: #0d6efd;
-}
-
-.circ-book-title-popover {
-    position: fixed;
-    z-index: 1080;
-    width: 200px;
-    padding: 0.65rem;
-    background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.16);
-    pointer-events: auto;
-}
-
-.circ-book-title-popover__cover {
-    display: block;
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 0.5rem;
-    background: #f1f5f9;
-}
-
-.circ-book-title-popover__text {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    line-height: 1.35;
-    color: #0f172a;
+    max-width: 220px;
 }
 
 .circulation-page .pagination .page-link {

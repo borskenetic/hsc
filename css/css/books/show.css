@@ -1,0 +1,29 @@
+
+  
+    .body{
+        position: fixed;
+        
+    }
+    
+   .book-heading {
+     
+  background-color: #22333b;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0rem 0rem 1rem 1rem;
+  margin-top: 1rem;
+  font-size: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ✅ this centers the icon and text */
+  width: 100%;
+  margin-bottom: 2rem;
+  height: 100px;
+  font-family: 'Rubik', sans-serif; 
+  font-weight: bold; 
+  color: white;
+}
+* {
+    border-radius: 0 !important;
+}
+

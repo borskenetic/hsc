@@ -1,0 +1,209 @@
+/* =============================================================================
+   USM Library — global + staff layout responsiveness
+   Load after Bootstrap and (for staff) css/books/index.css
+   ============================================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Staff top bar (layouts main / sec / app) */
+.staff-top-bar {
+    position: relative;
+    z-index: 1030;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 0.5rem;
+    padding-left: clamp(0.75rem, 2vw, 1.25rem) !important;
+    padding-right: clamp(0.75rem, 2vw, 1.25rem) !important;
+}
+
+.staff-top-bar > a:first-of-type,
+.staff-top-bar > a[href*="book.index"] {
+    flex-shrink: 0;
+}
+
+.staff-top-bar .header-logo-img {
+    margin-left: 0 !important;
+    width: auto !important;
+    max-width: min(140px, 38vw);
+    height: auto;
+    max-height: 44px;
+    object-fit: contain;
+}
+
+.staff-top-bar .school-name {
+    min-width: 0;
+    flex: 1 1 auto;
+    font-size: clamp(0.85rem, 2.5vw, 1.3rem);
+}
+
+.staff-top-bar .toggle-btn,
+.staff-top-bar .close-btn {
+    flex-shrink: 0;
+}
+
+/* Main content: readable line length on ultra-wide monitors */
+main .container,
+body > .container.py-3 {
+    max-width: min(100%, 1400px);
+}
+
+/* Data tables:
+   - Desktop: allow dropdowns/menus to overflow outside tables
+   - Small screens: keep horizontal scrolling */
+main .table-responsive {
+    overflow: visible !important;
+}
+
+@media (max-width: 991.98px) {
+    main .table-responsive {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Collapsible nav — matches Bootstrap lg (992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+    #routeWrapper {
+        display: none !important;
+        flex-direction: column;
+        align-items: stretch;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        max-height: min(85vh, 640px);
+        overflow-y: auto;
+        padding: 1rem;
+        z-index: 1040;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        text-align: left;
+        gap: 0.35rem !important;
+    }
+
+    #routeWrapper.open {
+        display: flex !important;
+    }
+
+    #customMenuToggle {
+        display: block !important;
+        margin-left: auto;
+    }
+
+    #customMenuClose {
+        display: block !important;
+        align-self: flex-end;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Stack nav controls full width */
+    #routeWrapper > a,
+    #routeWrapper > form {
+        width: 100%;
+        text-align: center;
+    }
+
+    #routeWrapper .btn5 {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    /* Dropdowns: static lists (touch-friendly; no hover reliance) */
+    #routeWrapper.open .logs_dropdown,
+    #routeWrapper.open .attendance_dropdown {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5rem;
+    }
+
+    #routeWrapper.open .logs_dropdown-button,
+    #routeWrapper.open .attendance_dropdown-button {
+        width: 100%;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    #routeWrapper.open .logs_dropdown-content,
+    #routeWrapper.open .attendance_dropdown-content {
+        display: block !important;
+        position: static !important;
+        width: 100%;
+        min-width: 0;
+        box-shadow: none;
+        border-left: 3px solid #1f7902;
+        margin-top: 0.35rem;
+        padding-left: 0.25rem;
+    }
+
+    #routeWrapper.open .logs_dropdown:hover .logs_dropdown-content,
+    #routeWrapper.open .attendance_dropdown:hover .attendance_dropdown-content {
+        display: block !important;
+    }
+}
+
+@media (min-width: 992px) {
+    #customMenuToggle,
+    #customMenuClose {
+        display: none !important;
+    }
+}
+
+/* Banner under staff header — show full image (no crop) */
+.head {
+    width: 100%;
+    line-height: 0;
+}
+
+.head .banner-img,
+.staff-top-bar + .head .banner-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+/* OPAC landing (public) header — no fixed left margin */
+.opac-public-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.65rem clamp(0.75rem, 3vw, 2rem);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.opac-logo-wrap {
+    margin-left: 0 !important;
+}
+
+.opac-logo-wrap img {
+    max-height: 48px;
+    width: auto;
+}
+
+@media (max-width: 576px) {
+    #cartButton {
+        right: 12px !important;
+        bottom: 16px !important;
+        padding: 10px 16px !important;
+        font-size: 0.9rem !important;
+    }
+}
