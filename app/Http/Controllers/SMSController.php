@@ -27,7 +27,8 @@ class SMSController extends Controller
     }
 
     /**
-     * POST JSON array to sms_server.py (SIM modem). Returns null if URL/API key missing.
+     * POST JSON array to sms_server.py (SIM modem). Returns null if URL/API key missing
+     * or the modem is unreachable (never throws — callers must keep working without SMS).
      */
     private function postToSmsModem(array $payload): ?\Illuminate\Http\Client\Response
     {
@@ -38,10 +39,22 @@ class SMSController extends Controller
             return null;
         }
 
-        return Http::withHeaders([
-            'X-API-KEY' => $apiKey,
-            'Accept' => 'application/json',
-        ])->asJson()->timeout(30)->post($url, $payload);
+        try {
+            return Http::withHeaders([
+                'X-API-KEY' => $apiKey,
+                'Accept' => 'application/json',
+            ])->asJson()
+                ->connectTimeout(3)
+                ->timeout(10)
+                ->post($url, $payload);
+        } catch (\Throwable $e) {
+            \Log::warning('SMS modem unreachable', [
+                'url' => $url,
+                'message' => $e->getMessage(),
+            ]);
+
+            return null;
+        }
     }
 
     public function index()

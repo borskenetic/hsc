@@ -130,28 +130,34 @@ class AttendanceController extends Controller
                 'scanned_at' => Carbon::now('Asia/Manila'),
             ]);
             
-            // Send attendance SMS
-            if (!empty($student->mobile_number)) {
-            
-                $template = Setting::where('key', 'scan_sms')->value('value')
-                    ?? 'Hello {name}, you scanned {status} at the library at {time}.';
-            
-                $message = str_replace(
-                    ['{name}', '{status}', '{time}'],
-                    [
-                        trim($student->firstname . ' ' . $student->lastname),
-                        $newStatus,
-                        Carbon::now('Asia/Manila')->format('h:i A'),
-                    ],
-                    $template
-                );
-            
-                app(SMSController::class)->sendDirect(
-                    $student->mobile_number,
-                    $message
-                );
+            // Best-effort SMS — must not block or break the kiosk JSON response.
+            if (! empty($student->mobile_number)) {
+                try {
+                    $template = Setting::where('key', 'scan_sms')->value('value')
+                        ?? 'Hello {name}, you scanned {status} at the library at {time}.';
+
+                    $message = str_replace(
+                        ['{name}', '{status}', '{time}'],
+                        [
+                            trim($student->firstname.' '.$student->lastname),
+                            $newStatus,
+                            Carbon::now('Asia/Manila')->format('h:i A'),
+                        ],
+                        $template
+                    );
+
+                    app(SMSController::class)->sendDirect(
+                        $student->mobile_number,
+                        $message
+                    );
+                } catch (\Throwable $e) {
+                    \Log::warning('Attendance scan SMS failed', [
+                        'student_id' => $student->id,
+                        'message' => $e->getMessage(),
+                    ]);
+                }
             }
-    
+
             return response()->json([
                 'type' => 'student',
                 'student_id' => $student->id,
