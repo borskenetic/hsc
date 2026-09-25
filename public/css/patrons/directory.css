@@ -28,7 +28,7 @@
 .patron-dir__title {
     font-size: 1.6rem;
     font-weight: 700;
-    color: var(--brand-button-bg, #1f4ea7);
+    color: var(--brand-shell-button-bg, var(--brand-button-bg, #af14e9));
     margin: 0 0 0.25rem;
 }
 
@@ -66,22 +66,23 @@
     color: var(--brand-button-text, #fff);
     text-decoration: none;
     border-radius: 8px;
-    transition: background 0.15s, color 0.15s;
-    background: var(--brand-button-bg, #1f4ea7);
+    transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    background: var(--brand-shell-button-bg, var(--brand-button-bg, #af14e9));
     border: none;
     font-family: inherit;
     cursor: pointer;
 }
 
 .patron-dir__tab:hover {
-    background: var(--brand-button-hover-bg, #163a82);
+    background: var(--brand-button-hover-bg, #8a0fb8);
     color: var(--brand-button-hover-text, #fff);
 }
 
 .patron-dir__tab.active {
-    background: color-mix(in srgb, var(--brand-button-bg, #1f4ea7) 78%, #000000);
+    /* Same solid fill as other tabs — active marked by inset ring only */
+    background: var(--brand-shell-button-bg, var(--brand-button-bg, #af14e9));
     color: var(--brand-button-text, #fff);
-    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.35);
 }
 
 .patron-dir__quick-actions {
@@ -96,7 +97,7 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.65rem 1rem;
-    background: var(--brand-button-bg, #1f4ea7);
+    background: var(--brand-shell-button-bg, var(--brand-button-bg, #af14e9));
     border: 2px solid transparent;
     border-radius: 10px;
     text-decoration: none;
@@ -108,20 +109,20 @@
 }
 
 .patron-dir__quick-action:hover {
-    background: var(--brand-button-hover-bg, #163a82);
+    background: var(--brand-button-hover-bg, #8a0fb8);
     color: var(--brand-button-hover-text, #fff);
     transform: translateY(-1px);
 }
 
 .patron-dir__quick-action--attention {
     border-color: transparent;
-    background: var(--brand-button-bg, #1f4ea7);
+    background: var(--brand-shell-button-bg, var(--brand-button-bg, #af14e9));
     color: var(--brand-button-text, #fff);
 }
 
 .patron-dir__quick-action--attention:hover {
     border-color: transparent;
-    background: var(--brand-button-hover-bg, #163a82);
+    background: var(--brand-button-hover-bg, #8a0fb8);
     color: var(--brand-button-hover-text, #fff);
 }
 
@@ -294,34 +295,34 @@
 }
 
 .patron-dir__btn--primary {
-    background: var(--brand-button-bg, #1f4ea7);
+    background: var(--brand-shell-button-bg, var(--brand-button-bg, #af14e9));
     color: var(--brand-button-text, #fff);
 }
 
 .patron-dir__btn--primary:hover {
-    background: var(--brand-button-hover-bg, #2e7d32);
+    background: var(--brand-button-hover-bg, #8a0fb8);
     color: var(--brand-button-hover-text, #fff);
 }
 
 .patron-dir__btn--outline {
-    background: var(--brand-button-bg, #1f4ea7);
+    background: var(--brand-shell-button-bg, var(--brand-button-bg, #af14e9));
     color: var(--brand-button-text, #fff);
     border: 1px solid transparent;
 }
 
 .patron-dir__btn--outline:hover {
-    background: var(--brand-button-hover-bg, #163a82);
+    background: var(--brand-button-hover-bg, #8a0fb8);
     color: var(--brand-button-hover-text, #fff);
 }
 
 .patron-dir__btn--ghost {
-    background: var(--brand-button-bg, #1f4ea7);
+    background: var(--brand-shell-button-bg, var(--brand-button-bg, #af14e9));
     color: var(--brand-button-text, #fff);
     border: 1px solid transparent;
 }
 
 .patron-dir__btn--ghost:hover {
-    background: var(--brand-button-hover-bg, #163a82);
+    background: var(--brand-button-hover-bg, #8a0fb8);
     color: var(--brand-button-hover-text, #fff);
 }
 

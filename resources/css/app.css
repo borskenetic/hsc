@@ -357,23 +357,27 @@
     }
 
     /*
-     * Main content buttons: filled primary (sidebar color).
+     * Main content buttons: always solid brand purple (never washed/pale).
+     * Includes outline / secondary / legacy patron-dir buttons.
      * Status variants (available / borrowed / success / danger) stay semantic.
-     */
-    /*
-     * Main content primary buttons: always solid brand purple (never washed/pale).
-     * Covers default + secondary; status / outline / ghost / link stay as-is.
      */
     .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="default"],
     .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="secondary"],
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="outline"],
     .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="default"],
     .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="secondary"],
-    .admin-shell [data-slot="admin-main"] .legacy-page-content a.btn:not(.btn-outline-secondary):not(.btn-outline-danger):not(.btn-available):not(.btn-borrowed):not(.btn-success):not(.btn-import),
-    .admin-shell [data-slot="admin-main"] .legacy-page-content button.btn:not(.btn-outline-secondary):not(.btn-outline-danger):not(.btn-success):not(.btn-import),
-    .admin-shell [data-slot="admin-main"] .legacy-page-content [class*="__btn"]:not([class*="__btn--outline"]):not([class*="--success"]):not([class*="--danger"]),
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="outline"],
+    .admin-shell [data-slot="admin-main"] .legacy-page-content a.btn:not(.btn-outline-danger):not(.btn-available):not(.btn-borrowed):not(.btn-success):not(.btn-import),
+    .admin-shell [data-slot="admin-main"] .legacy-page-content button.btn:not(.btn-outline-danger):not(.btn-success):not(.btn-import),
+    .admin-shell [data-slot="admin-main"] .legacy-page-content [class*="__btn"]:not([class*="--success"]):not([class*="--danger"]),
     .admin-shell [data-slot="admin-main"] .legacy-page-content [class*="__quick-action"],
-    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__tab {
-        background-color: var(--brand-shell-button-bg, var(--brand-sidebar-bg, var(--primary))) !important;
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__tab,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__tab.active,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--primary,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--outline,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--ghost {
+        background-color: var(--brand-shell-button-bg, #af14e9) !important;
         background-image: none !important;
         color: var(--brand-shell-button-text, #ffffff) !important;
         border-color: transparent !important;
@@ -389,6 +393,10 @@
     .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="secondary"]:focus,
     .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="secondary"]:focus-visible,
     .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="secondary"]:active,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="outline"]:hover,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="outline"]:focus,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="outline"]:focus-visible,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="outline"]:active,
     .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="default"]:hover,
     .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="default"]:focus,
     .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="default"]:focus-visible,
@@ -397,16 +405,21 @@
     .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="secondary"]:focus,
     .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="secondary"]:focus-visible,
     .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="secondary"]:active,
-    .admin-shell [data-slot="admin-main"] .legacy-page-content a.btn:not(.btn-outline-secondary):not(.btn-outline-danger):not(.btn-available):not(.btn-borrowed):not(.btn-success):not(.btn-import):hover,
-    .admin-shell [data-slot="admin-main"] .legacy-page-content button.btn:not(.btn-outline-secondary):not(.btn-outline-danger):not(.btn-success):not(.btn-import):hover,
-    .admin-shell [data-slot="admin-main"] .legacy-page-content [class*="__btn"]:not([class*="__btn--outline"]):not([class*="--success"]):not([class*="--danger"]):hover,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="outline"]:hover,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="outline"]:focus,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="outline"]:focus-visible,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="outline"]:active,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content a.btn:not(.btn-outline-danger):not(.btn-available):not(.btn-borrowed):not(.btn-success):not(.btn-import):hover,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content button.btn:not(.btn-outline-danger):not(.btn-success):not(.btn-import):hover,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content [class*="__btn"]:not([class*="--success"]):not([class*="--danger"]):hover,
     .admin-shell [data-slot="admin-main"] .legacy-page-content [class*="__quick-action"]:hover,
-    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__tab:hover {
-        background-color: color-mix(
-            in srgb,
-            var(--brand-shell-button-bg, var(--brand-sidebar-bg, var(--primary))) 82%,
-            #000000
-        ) !important;
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__tab:hover,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__tab.active:hover,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn:hover,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--primary:hover,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--outline:hover,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--ghost:hover {
+        background-color: var(--brand-button-hover-bg, #8a0fb8) !important;
         background-image: none !important;
         color: var(--brand-shell-button-text, #ffffff) !important;
         opacity: 1 !important;
