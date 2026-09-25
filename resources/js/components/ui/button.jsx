@@ -10,11 +10,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "!bg-[var(--brand-shell-button-bg,var(--primary))] !text-[var(--brand-shell-button-text,#ffffff)] hover:!bg-[color-mix(in_srgb,var(--brand-shell-button-bg,var(--primary))_82%,#000000)] focus-visible:!bg-[var(--brand-shell-button-bg,var(--primary))] active:!bg-[color-mix(in_srgb,var(--brand-shell-button-bg,var(--primary))_75%,#000000)]",
+          "!bg-[#af14e9] !text-white hover:!bg-[#8a0fb8] focus-visible:!bg-[#af14e9] active:!bg-[#8a0fb8]",
         outline:
           "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
+          "!bg-[#af14e9] !text-white hover:!bg-[#8a0fb8] focus-visible:!bg-[#af14e9] active:!bg-[#8a0fb8]",
         ghost:
           "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
         destructive:

@@ -66,6 +66,10 @@ function SectionLabel({ children }) {
     );
 }
 
+/** Solid brand purple — matches Search / Apply filters (never pale lavender). */
+const solidPurpleBtn =
+    'w-full !bg-[#af14e9] hover:!bg-[#8a0fb8] focus-visible:!bg-[#af14e9] active:!bg-[#8a0fb8] !text-white !opacity-100';
+
 export function CatalogFilterSidebar({ programs, filters, hasActiveQuery }) {
     const [search, setSearch] = useState(filters.search ?? '');
     const [program, setProgram] = useState(filters.program ? String(filters.program) : '');
@@ -88,7 +92,7 @@ export function CatalogFilterSidebar({ programs, filters, hasActiveQuery }) {
             <CardContent className="space-y-4 pt-4">
                 <Button
                     type="button"
-                    className="w-full"
+                    className={solidPurpleBtn}
                     variant="default"
                     onClick={() => visitCatalog(filters, { show_all: 1, page: undefined })}
                 >
@@ -169,7 +173,7 @@ export function CatalogFilterSidebar({ programs, filters, hasActiveQuery }) {
                         />
                     ) : null}
 
-                    <Button type="submit" className="w-full" variant="default">
+                    <Button type="submit" className={solidPurpleBtn} variant="default">
                         Search / Apply filters
                     </Button>
 
@@ -234,13 +238,13 @@ export function CatalogFilterSidebar({ programs, filters, hasActiveQuery }) {
                 <div className="space-y-2">
                     <SectionLabel>Catalog & collections</SectionLabel>
                     <div className="grid gap-2">
-                        <Button asChild variant="default" className="w-full">
+                        <Button asChild variant="default" className={solidPurpleBtn}>
                             <a href="/book/create">Cataloging</a>
                         </Button>
-                        <Button asChild variant="default" className="w-full">
+                        <Button asChild variant="default" className={solidPurpleBtn}>
                             <a href="/ebooks">View E-Resources</a>
                         </Button>
-                        <Button asChild variant="default" className="w-full">
+                        <Button asChild variant="default" className={solidPurpleBtn}>
                             <a href="/staff/books/archived">Archived</a>
                         </Button>
                         <Button asChild variant="destructive" className="w-full">
@@ -322,7 +326,7 @@ export function CatalogEmptyState() {
                     publication year, or choose Available / Borrowed to load results here.
                 </p>
                 <Button
-                    className="mt-6"
+                    className="mt-6 !bg-[#af14e9] hover:!bg-[#8a0fb8] !text-white !opacity-100"
                     size="lg"
                     onClick={() => router.get('/book', { show_all: 1 })}
                 >

@@ -377,9 +377,9 @@
     .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--primary,
     .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--outline,
     .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--ghost {
-        background-color: var(--brand-shell-button-bg, #af14e9) !important;
+        background-color: #af14e9 !important;
         background-image: none !important;
-        color: var(--brand-shell-button-text, #ffffff) !important;
+        color: #ffffff !important;
         border-color: transparent !important;
         opacity: 1 !important;
         filter: none !important;
@@ -419,9 +419,9 @@
     .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--primary:hover,
     .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--outline:hover,
     .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__btn--ghost:hover {
-        background-color: var(--brand-button-hover-bg, #8a0fb8) !important;
+        background-color: #8a0fb8 !important;
         background-image: none !important;
-        color: var(--brand-shell-button-text, #ffffff) !important;
+        color: #ffffff !important;
         opacity: 1 !important;
         filter: none !important;
     }
