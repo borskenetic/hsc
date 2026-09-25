@@ -272,7 +272,7 @@ export function CatalogFilterSidebar({ programs, filters, hasActiveQuery }) {
                             name="file"
                             accept=".csv,.xlsx"
                             required
-                            className="catalog-file-input text-xs file:mr-2 file:rounded-md file:border-0 file:bg-primary file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-primary-foreground hover:file:bg-primary/85"
+                            className="catalog-file-input text-xs file:mr-2 file:rounded-md file:border-0 file:bg-primary file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-primary-foreground hover:file:bg-[color-mix(in_srgb,var(--primary)_82%,#000000)]"
                         />
                         <Button type="submit" variant="success" className="w-full">
                             Import books

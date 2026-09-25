@@ -176,14 +176,14 @@
         }
 
         .btn-addbook {
-            background-color: white;
-            color: var(--brand-button-bg, #22333b);
+            background-color: var(--brand-button-bg, #22333b);
+            color: var(--brand-button-text, #ffffff);
             padding: 7px 50px;
             font-weight: bold;
         }
         .btn-addbook:hover {
             background-color: var(--brand-button-hover-bg, #ffb845);
-            color: var(--brand-button-hover-text, #22333b);
+            color: var(--brand-button-hover-text, #ffffff);
         }
         
         
@@ -211,14 +211,14 @@
         }
 
         .btn-e-book {
-            background-color: white;
-            color: var(--brand-button-bg, #22333b);
+            background-color: var(--brand-button-bg, #22333b);
+            color: var(--brand-button-text, #ffffff);
             padding: 7px 40px;
             font-weight: bold;
         }
         .btn-e-book:hover {
             background-color: var(--brand-button-hover-bg, #ffb845);
-            color: var(--brand-button-hover-text, #22333b);
+            color: var(--brand-button-hover-text, #ffffff);
         }
         .btn-superuser {
             background-color: white;
