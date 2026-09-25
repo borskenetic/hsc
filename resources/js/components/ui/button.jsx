@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground hover:bg-[color-mix(in_srgb,var(--primary)_82%,#000000)]",
+          "!bg-[var(--brand-shell-button-bg,var(--primary))] !text-[var(--brand-shell-button-text,#ffffff)] hover:!bg-[color-mix(in_srgb,var(--brand-shell-button-bg,var(--primary))_82%,#000000)] focus-visible:!bg-[var(--brand-shell-button-bg,var(--primary))] active:!bg-[color-mix(in_srgb,var(--brand-shell-button-bg,var(--primary))_75%,#000000)]",
         outline:
           "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
         secondary:

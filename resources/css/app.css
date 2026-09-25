@@ -360,33 +360,57 @@
      * Main content buttons: filled primary (sidebar color).
      * Status variants (available / borrowed / success / danger) stay semantic.
      */
-    .admin-shell [data-slot="admin-main"] [data-slot="button"]:not([data-variant="available"]):not([data-variant="borrowed"]):not([data-variant="success"]):not([data-variant="destructive"]):not([data-variant="ghost"]):not([data-variant="link"]):not([data-variant="outline"]),
-    .admin-shell [data-slot="admin-main"] a[data-slot="button"]:not([data-variant="available"]):not([data-variant="borrowed"]):not([data-variant="success"]):not([data-variant="destructive"]):not([data-variant="ghost"]):not([data-variant="link"]):not([data-variant="outline"]),
-    .admin-shell [data-slot="admin-main"] .legacy-page-content a.btn:not(.btn-outline-secondary):not(.btn-outline-danger):not(.btn-available):not(.btn-borrowed),
-    .admin-shell [data-slot="admin-main"] .legacy-page-content button.btn:not(.btn-outline-secondary):not(.btn-outline-danger),
+    /*
+     * Main content primary buttons: always solid brand purple (never washed/pale).
+     * Covers default + secondary; status / outline / ghost / link stay as-is.
+     */
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="default"],
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="secondary"],
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="default"],
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="secondary"],
+    .admin-shell [data-slot="admin-main"] .legacy-page-content a.btn:not(.btn-outline-secondary):not(.btn-outline-danger):not(.btn-available):not(.btn-borrowed):not(.btn-success):not(.btn-import),
+    .admin-shell [data-slot="admin-main"] .legacy-page-content button.btn:not(.btn-outline-secondary):not(.btn-outline-danger):not(.btn-success):not(.btn-import),
     .admin-shell [data-slot="admin-main"] .legacy-page-content [class*="__btn"]:not([class*="__btn--outline"]):not([class*="--success"]):not([class*="--danger"]),
     .admin-shell [data-slot="admin-main"] .legacy-page-content [class*="__quick-action"],
     .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__tab {
-        background: var(--brand-shell-button-bg, var(--brand-sidebar-bg, var(--primary))) !important;
+        background-color: var(--brand-shell-button-bg, var(--brand-sidebar-bg, var(--primary))) !important;
+        background-image: none !important;
         color: var(--brand-shell-button-text, #ffffff) !important;
         border-color: transparent !important;
         opacity: 1 !important;
+        filter: none !important;
     }
 
-    .admin-shell [data-slot="admin-main"] [data-slot="button"]:not([data-variant="available"]):not([data-variant="borrowed"]):not([data-variant="success"]):not([data-variant="destructive"]):not([data-variant="ghost"]):not([data-variant="link"]):not([data-variant="outline"]):hover,
-    .admin-shell [data-slot="admin-main"] a[data-slot="button"]:not([data-variant="available"]):not([data-variant="borrowed"]):not([data-variant="success"]):not([data-variant="destructive"]):not([data-variant="ghost"]):not([data-variant="link"]):not([data-variant="outline"]):hover,
-    .admin-shell [data-slot="admin-main"] .legacy-page-content a.btn:not(.btn-outline-secondary):not(.btn-outline-danger):not(.btn-available):not(.btn-borrowed):hover,
-    .admin-shell [data-slot="admin-main"] .legacy-page-content button.btn:not(.btn-outline-secondary):not(.btn-outline-danger):hover,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="default"]:hover,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="default"]:focus,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="default"]:focus-visible,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="default"]:active,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="secondary"]:hover,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="secondary"]:focus,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="secondary"]:focus-visible,
+    .admin-shell [data-slot="admin-main"] [data-slot="button"][data-variant="secondary"]:active,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="default"]:hover,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="default"]:focus,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="default"]:focus-visible,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="default"]:active,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="secondary"]:hover,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="secondary"]:focus,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="secondary"]:focus-visible,
+    .admin-shell [data-slot="admin-main"] a[data-slot="button"][data-variant="secondary"]:active,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content a.btn:not(.btn-outline-secondary):not(.btn-outline-danger):not(.btn-available):not(.btn-borrowed):not(.btn-success):not(.btn-import):hover,
+    .admin-shell [data-slot="admin-main"] .legacy-page-content button.btn:not(.btn-outline-secondary):not(.btn-outline-danger):not(.btn-success):not(.btn-import):hover,
     .admin-shell [data-slot="admin-main"] .legacy-page-content [class*="__btn"]:not([class*="__btn--outline"]):not([class*="--success"]):not([class*="--danger"]):hover,
     .admin-shell [data-slot="admin-main"] .legacy-page-content [class*="__quick-action"]:hover,
     .admin-shell [data-slot="admin-main"] .legacy-page-content .patron-dir__tab:hover {
-        background: color-mix(
+        background-color: color-mix(
             in srgb,
             var(--brand-shell-button-bg, var(--brand-sidebar-bg, var(--primary))) 82%,
             #000000
         ) !important;
+        background-image: none !important;
         color: var(--brand-shell-button-text, #ffffff) !important;
         opacity: 1 !important;
+        filter: none !important;
     }
 
     /* Keep semantic green/red buttons when modules mark them */
